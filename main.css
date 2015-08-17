@@ -1,0 +1,34 @@
+body {
+  background-color: lightblue; }
+
+header {
+  border-bottom: 1px solid black; }
+  header h1 {
+    text-align: right; }
+  header h2 {
+    text-align: right; }
+
+.badge_img {
+  height: 100px;
+  width: 100px; }
+
+#badge img {
+  float: right; }
+
+.first, .second, .third {
+  border-bottom: 1px solid black; }
+  .first h1, .second h1, .third h1 {
+    text-align: center; }
+  .first h2, .second h2, .third h2 {
+    text-align: center; }
+  .first ul li, .second ul li, .third ul li {
+    text-align: center;
+    list-style-position: inside; }
+
+.second p {
+  font-size: 20px;
+  font-weight: normal;
+  margin-right: 10%;
+  margin-left: 10%; }
+
+/*# sourceMappingURL=main.css.map */

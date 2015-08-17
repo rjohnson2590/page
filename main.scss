@@ -1,0 +1,59 @@
+
+body{
+	background-color: lightblue;
+}
+
+header{
+	border-bottom: 1px solid black;
+	h1{
+		text-align: right;	
+	}
+	h2{
+		text-align: right;
+	}
+}
+
+
+.badge_img{
+	height: 100px;
+	width: 100px;
+}
+
+#badge img{
+
+	float:right;
+}
+
+
+
+.first{
+
+	border-bottom: 1px solid black;
+
+	h1{
+		text-align: center;
+	}
+	h2{
+		text-align: center;
+	}
+	
+
+	ul li{
+		text-align: center;
+		list-style-position: inside;
+	}
+}
+
+.second{
+	@extend .first;
+	p{
+		font-size: 20px;
+		font-weight: normal;
+		margin-right:10%;
+		margin-left:10%;
+	}
+}
+
+.third{
+	@extend .first;
+}
