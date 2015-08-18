@@ -1,3 +1,11 @@
+$(window).scroll(function() {
+if ($(this).scrollTop() > 20){  
+    $('header').addClass("sticky");
+  }
+  else{
+    $('header').removeClass("sticky");
+  }
+});
 
 var TreeModel= Backbone.Model.extend({
 	defaults : {'id':'', 'name': '', 'icon':''},
@@ -45,14 +53,5 @@ var treeModel = new TreeModel({})
 var treeView = new TreeView({model: treeModel})
 
 treeModel.badgeCall();
-
-
-
-
-
-
-
-
-
 
 
