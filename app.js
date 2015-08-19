@@ -1,11 +1,27 @@
-$(window).scroll(function() {
-if ($(this).scrollTop() > 20){  
-    $('header').addClass("sticky");
-  }
-  else{
-    $('header').removeClass("sticky");
-  }
-});
+
+//Initial load of page
+$(document).ready(sizeContent);
+
+//Every resize of window
+$(window).resize(sizeContent);
+
+//Dynamically assign height
+function sizeContent() {
+var newHeight = $("html").height() + "px";
+$(".header").css("height", newHeight);
+$(".content").css("top", newHeight);
+}
+
+//Fade header on scroll
+$(window).scroll(function(){
+    $(".header h1").css("opacity", 1 - $(window).scrollTop() / 500);
+  });
+
+$(window).scroll(function(){
+    $(".header h2").css("opacity", 1 - $(window).scrollTop() / 500);
+  });
+
+
 
 var TreeModel= Backbone.Model.extend({
 	defaults : {'id':'', 'name': '', 'icon':''},
