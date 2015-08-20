@@ -1,24 +1,23 @@
 
-//Initial load of page
 $(document).ready(sizeContent);
 
-//Every resize of window
+
 $(window).resize(sizeContent);
 
-//Dynamically assign height
+
 function sizeContent() {
-var newHeight = $("html").height() + "px";
-$(".header").css("height", newHeight);
-$(".content").css("top", newHeight);
+	var newHeight = $("html").height() + "px";
+	$(".header").css("height", newHeight);
+	$(".content").css("top", newHeight);
 }
 
-//Fade header on scroll
+
 $(window).scroll(function(){
-    $(".header h1").css("opacity", 1 - $(window).scrollTop() / 500);
+    $(".header h1").css("opacity", 1 - $(window).scrollTop() / 600);
   });
 
 $(window).scroll(function(){
-    $(".header h2").css("opacity", 1 - $(window).scrollTop() / 500);
+    $(".header h2").css("opacity", 1 - $(window).scrollTop() / 600);
   });
 
 
@@ -39,9 +38,7 @@ var TreeModel= Backbone.Model.extend({
 		  	var results= JSON.parse(data)
 		    console.log(results.badges.length)
 		    for (var i=0; i<results.badges.length; i++){
-		    	model.set({'id': results.badges[i].id, 'name': results.badges[i].name, 'icon': results.badges[i].icon_url})
-		    	console.log('hello')
-		    	// $('#badges').append(view.$el)
+		    	model.set({'id': results.badges[i].id, 'name': results.badges[i].name, 'icon': results.badges[i].icon_url})	 		 
 		    }
 
 		  });
@@ -51,14 +48,13 @@ var TreeModel= Backbone.Model.extend({
 
 
 var TreeView= Backbone.View.extend({
-	tagName: 'p',
+	tagName: 'li',
 	render: function (){
-		console.log('hello1')
 		var name = this.model.get('name')
 		var id = this.model.get('id')
 		var icon = this.model.get('icon')
-		this.$el=$('#badges');
-		this.$el.append('<p> <img class="badge_img" src="'+ icon+ '">'+name+ '</p>')
+		this.$el=$('#badges_list');
+		this.$el.append('<li> <img class="badge_img" src="'+ icon+ '">'+name+ '</li>')
 	},
 	 initialize: function () {
             this.model.on("change", this.render, this);

@@ -1,11 +1,13 @@
 body{
-max-width: 100%;
+	max-width: 100%;
+	background-color: lightgrey;
 
 }
+
 #canvas{
 	display: block;
-border: 5px solid black;
-margin:auto;
+	border: 5px solid black;
+	margin:auto;
 }
 
 #circle{
@@ -22,11 +24,28 @@ margin:auto;
     position:absolute;
 }
 #gg {
-margin:auto;
-text-align: center;
+	margin:auto;
+	text-align: center;
 }
 
 #reload{ 	
-margin-left: -30%;
-margin-top: -10%;
+	margin-left: -30%;
+	margin-top: -10%;
 }
+
+h2{
+	font-family: 'Orbitron', sans-serif;
+	text-align: center;
+}
+
+a{
+		text-decoration: none;
+		color: black;
+		border: 1px solid black;
+		padding: 10px;
+
+}
+
+a:active{
+	box-shadow: 10px 5px 5px black;
+};
