@@ -145,7 +145,7 @@ function update(){
   ctx.fillStyle = "red";
   ctx.fillRect(player.x, player.y, player.width, player.height);
   if(player.x>=85 && player.x<=95 && player.y>=40 && player.y<=50){
-    var newUrl=['index.html']
+    var newUrl=['game.html']
     alert('Access Granted')
     window.location.replace(newUrl)
   }
