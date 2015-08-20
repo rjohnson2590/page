@@ -148,6 +148,7 @@ function update(){
     var newUrl=['game.html']
     window.alert('Access Granted')
     window.location.replace(newUrl)
+    return;
   }
 
   requestAnimationFrame(update);
