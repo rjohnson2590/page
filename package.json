@@ -1,0 +1,21 @@
+{
+  "name": "page",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjohnson2590/page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rjohnson2590/page/issues"
+  },
+  "homepage": "https://github.com/rjohnson2590/page",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
